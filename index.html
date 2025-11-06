@@ -108,26 +108,88 @@
 
 
     <main id="main">
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about" style="padding-top: 10rem">
+      <!-- ======= About Section (rapi & eye-catching) ======= -->
+      <section id="about" class="py-5 bg-light">
+        <style>
+          /* aksen judul */
+          .title-accent{
+            font-weight: 800;
+            letter-spacing:.2px;
+            background: linear-gradient(90deg,#004A74 0%, #0ea5b6 100%);
+            -webkit-background-clip:text;
+            background-clip:text;
+            color: transparent;
+          }
+          /* paragraf utama */
+          .lead-geo{
+            font-size:1.05rem;
+            line-height:1.9;
+            text-align: justify;
+          }
+          /* dropcap lembut */
+          .lead-geo b:first-child::first-letter{
+            font-size:2.4rem; 
+            line-height:1; 
+            float:left; 
+            padding:0 .25rem 0 0; 
+            color:#004A74;
+            font-weight:800;
+          }
+          /* badge kecil di foto */
+          .photo-badge{
+            position:absolute; 
+            top:12px; 
+            left:12px;
+            background:#004A74; 
+            color:#fff; 
+            font-size:.8rem; 
+            padding:.35rem .6rem; 
+            border-radius:999px;
+            box-shadow:0 4px 14px rgba(0,0,0,.18);
+          }
+        </style>
+
         <div class="container" data-aos="fade-up">
-          <div class="row">
+          <div class="row align-items-center g-5">
+            
+            <!-- Foto -->
             <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-              <img src="assets/img/buper2.png" class="img-fluid" alt="" style="border-radius: 5%" />
+              <div class="position-relative">
+                <span class="photo-badge">Kaliurang · Sleman</span>
+                <img src="assets/img/buper2.png" alt="Bumi Perkemahan Karang Pramuka"
+                    class="img-fluid rounded-4 shadow-lg w-100"
+                    style="object-fit:cover; aspect-ratio: 16/10;">
+              </div>
             </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-              <h2><b>Tentang</b></h2>
-              <br />
-              <h5 style="text-align: justify; line-height: 2">
-                <b style="color: #004A74">Bumi Perkemahan Karang Pramuka</b>,  adalah kawasan perkemahan dan wisata alam yang terletak di Kaliurang, Hargobinangun, Kecamatan Pakem, Sleman, DI Yogyakarta. Berada di lereng selatan Gunung Merapi, area ini menawarkan suasana sejuk pegunungan, dikelilingi hutan pinus dan vegetasi hijau yang masih terjaga. 
-                Tempat ini kerap digunakan untuk kegiatan kepramukaan, outbound, pendidikan karakter, acara sekolah, hingga kegiatan organisasi karena memiliki ruang terbuka yang luas, aman, dan nyaman. Lokasinya yang strategis di kawasan wisata Kaliurang juga membuatnya dekat dengan berbagai destinasi alam seperti Hutan Pinus Ngandong, Tlogo Putri, dan Museum Petilasan Mbah Maridjan.
-                Dengan lingkungan yang tenang, udara bersih, dan panorama hijau, Bumi Perkemahan Karang Pramuka menjadi pilihan ideal untuk rekreasi alam, pembelajaran luar ruang, maupun aktivitas pengembangan diri.
-              </h5>
+
+            <!-- Teks -->
+            <div class="col-lg-6 order-2 order-lg-1">
+              <div class="mb-2 text-uppercase small text-secondary fw-semibold">Tentang</div>
+              <h2 class="title-accent mb-3">Bumi Perkemahan Karang Pramuka</h2>
+              <p class="lead-geo">
+                <b>Bumi Perkemahan Karang Pramuka</b>, adalah kawasan perkemahan dan wisata alam yang
+                terletak di Kaliurang, Hargobinangun, Kecamatan Pakem, Sleman, DI Yogyakarta. Berada di
+                lereng selatan Gunung Merapi, area ini menawarkan suasana pegunungan yang sejuk, dikelilingi
+                hutan pinus dan vegetasi hijau yang masih terjaga.
+              </p>
+              <p class="lead-geo">
+                Tempat ini kerap digunakan untuk kegiatan kepramukaan, <i>outbound</i>, pendidikan karakter,
+                acara sekolah, hingga kegiatan organisasi karena memiliki ruang terbuka yang luas, aman, dan
+                nyaman. Lokasinya strategis—dekat dengan Hutan Pinus Ngandong, Tlogo Putri, dan Museum
+                Petilasan Mbah Maridjan.
+              </p>
+              <div class="d-flex gap-3 mt-3">
+                <span class="badge rounded-pill text-bg-primary">Udara Sejuk</span>
+                <span class="badge rounded-pill text-bg-info">Ruang Terbuka Luas</span>
+                <span class="badge rounded-pill text-bg-secondary">Akses Wisata</span>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
       <!-- End About Section -->
+
 
       <!-- ======= Why Us Section ======= -->
       <section id="why-us" class="why-us" style="padding-top: 2rem">
