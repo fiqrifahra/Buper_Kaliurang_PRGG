@@ -138,9 +138,8 @@
 
     // ========== INISIALISASI VIEWER ==========
     const viewer = new Cesium.Viewer('cesiumContainer', {
-      terrain: Cesium.Terrain.fromWorldTerrain(),
-      selectionIndicator: true,
-      infoBox: true,
+      terrainProvider: new Cesium.EllipsoidTerrainProvider(), // 🌍 permukaan datar
+      baseLayerPicker: false,  // opsional: hilangkan tombol pilih base layer
     });
 
 
