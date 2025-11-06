@@ -143,9 +143,7 @@
       infoBox: true,
     });
 
-    // ========== TAMBAHKAN TERRAIN ==========
-    const baseTerrain = await Cesium.Cesium3DTileset.fromIonAssetId(terrainID);
-    viewer.scene.primitives.add(baseTerrain);
+
 
     // ========== TAMBAHKAN SEMUA MODEL ==========
     const tilesets = [];
