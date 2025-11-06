@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Gelanggang Inovasi & Kreativitas</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/bw_ugm.png" />
+
+  <!-- Font Awesome icons -->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
+
+  <!-- Core theme CSS (includes Bootstrap) -->
+  <link href="css/styles.css" rel="stylesheet" />
+
+  <!-- CesiumJS -->
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.112/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.112/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <style>
+    #cesiumContainer {
+      width: 100%;
+      height: 90vh;
+      margin-top: 70px;
+      border: 2px solid #004A74;
+    }
+
+    #toggle-fpv {
+      z-index: 1;
+      position: fixed;
+      top: 100px;
+      left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="d-flex align-items-center logo me-auto">
+        <img src="assets/img/bw_ugm.png" alt="Logo UGM" style="height: 40px; margin-right: 5px;">
+        <span>Gelanggang Inovasi & Kreativitas</span>
+      </a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="index.html">Beranda</a></li>
+          <li><a href="index.html#about">Tentang</a></li>
+          <li><a href="index.html#basemap">Data</a></li>
+          <li><a href="index.html#workspace">Tahapan</a></li>
+          <li><a href="index.html#ourteam">Tim Kami</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+      <a href="index.html" class="get-started-btn">Kembali ke Beranda</a>
+    </div>
+  </header>
+
+  <div id="cesiumContainer"></div>
+
+  <script type="module">
+    // ========== KONFIGURASI DASAR ==========
+    const terrainID = 2918417;  // ID terrain dari Cesium Ion
+
+    // ID untuk 3 model berbeda
+    const modelAssets = [
+      {
+
+        id: 2927001,
+        name: "Gelanggang Inovasi & Kreativitas UGM",
+        description: `
+    <div style="text-align:center">
+      <h3>Gelanggang Inovasi & Kreativitas UGM</h3>
+      <img src="assets/img/adhy.png" alt="GIK UGM" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+      <p>Pusat kegiatan mahasiswa dan ruang kolaborasi inovatif Universitas Gadjah Mada.</p>
+      <ul style="text-align:left">
+        <li><b>Lokasi:</b> Sleman, Yogyakarta</li>
+        <li><b>Koordinat:</b> 110.427743° BT, -7.591640° LS</li>
+      </ul>
+    </div>
+  `,
+        coords: [110.427743, -7.591640, 50],
+
+
+      },
+      {
+        id: 4019176,
+        name: "Gedung Riset & Inovasi",
+        description: `
+        <h3>Gedung Riset & Inovasi</h3>
+        <p>Fasilitas penelitian multidisiplin untuk mendukung inovasi teknologi.</p>
+        <ul>
+          <li><b>Lokasi:</b> Area kampus UGM</li>
+          <li><b>Koordinat:</b> 110.428200° BT, -7.591200° LS</li>
+        </ul>
+      `,
+        coords: [110.428200, -7.591200, 50],
+      },
+      {
+        id: 2918417,
+        name: "Tekno Park UGM",
+        description: `
+        <h3>Tekno Park UGM</h3>
+        <p>Pusat pengembangan teknologi dan kerja sama industri.</p>
+        <ul>
+          <li><b>Lokasi:</b> Yogyakarta Science Techno Park</li>
+          <li><b>Koordinat:</b> 110.428800° BT, -7.592000° LS</li>
+        </ul>
+      `,
+        coords: [110.428800, -7.592000, 50],
+      }
+    ];
+
+    // Ganti dengan token milik kamu sendiri dari Cesium Ion
+    Cesium.Ion.defaultAccessToken =
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1MjM2YjQ3Ny02Yzc0LTRmY2ItYjJhNC0xZDkwNjQyNDQ3NGUiLCJpZCI6MTgxNzEyLCJpYXQiOjE3NjI0MTQwNzd9.vUhIK2BwKIKIdJCT3v5pTUaMmQnCNWn9OhjuSVgYly0';
+
+    // ========== INISIALISASI VIEWER ==========
+    const viewer = new Cesium.Viewer('cesiumContainer', {
+      terrain: Cesium.Terrain.fromWorldTerrain(),
+      selectionIndicator: true,
+      infoBox: true,
+    });
+
+    // ========== TAMBAHKAN TERRAIN ==========
+    const baseTerrain = await Cesium.Cesium3DTileset.fromIonAssetId(terrainID);
+    viewer.scene.primitives.add(baseTerrain);
+
+    // ========== TAMBAHKAN SEMUA MODEL ==========
+    const tilesets = [];
+    for (const model of modelAssets) {
+      const tileset = await Cesium.Cesium3DTileset.fromIonAssetId(model.id);
+      viewer.scene.primitives.add(tileset);
+      tilesets.push({ tileset, ...model });
+
+      // Tambahkan label
+      viewer.entities.add({
+        name: model.name,
+        position: Cesium.Cartesian3.fromDegrees(...model.coords),
+        label: {
+          text: model.name,
+          font: "16px sans-serif",
+          fillColor: Cesium.Color.WHITE,
+          outlineColor: Cesium.Color.BLACK,
+          outlineWidth: 2,
+          style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+          verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+          pixelOffset: new Cesium.Cartesian2(0, -20)
+        }
+      });
+    }
+
+    // ========== ATUR POSISI KAMERA ==========
+    viewer.camera.flyTo({
+      destination: Cesium.Cartesian3.fromDegrees(110.427875, -7.592292, 2000),
+      orientation: {
+        heading: Cesium.Math.toRadians(0),
+        pitch: Cesium.Math.toRadians(-15),
+        roll: 0
+      },
+      duration: 3
+    });
+
+    // ========== TAMBAHKAN INTERAKSI KLIK ==========
+    const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+    handler.setInputAction((movement) => {
+      const pickedObject = viewer.scene.pick(movement.position);
+      if (!Cesium.defined(pickedObject)) {
+        return;
+      }
+
+      // Cari tileset mana yang diklik
+      const clickedTileset = tilesets.find(t => pickedObject.primitive === t.tileset);
+      if (clickedTileset) {
+        viewer.selectedEntity = new Cesium.Entity({
+          name: clickedTileset.name,
+          description: clickedTileset.description,
+        });
+      }
+    }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+  </script>
+
+</body>
+
+</html>
