@@ -105,7 +105,7 @@
 
 
     <main id="main">
-      <!-- ======= About Section (Teks + Galeri Geser di Bawah) ======= -->
+            <!-- ======= About Section (Teks + Galeri Geser di Bawah) ======= -->
       <section id="about" class="py-5 bg-light">
 
         <style>
@@ -159,6 +159,41 @@
           .icon-list li i{
             color:#0ea5b6;
             margin-top:.2rem;
+          }
+
+          /* Mini stat di kartu kanan (biar nggak berantakan) */
+          .mini-stat{
+            display:flex;
+            gap:.75rem;
+            margin-bottom:.9rem;
+          }
+          .mini-stat-icon{
+            width:34px;
+            height:34px;
+            border-radius:999px;
+            background:#e6f4ff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-shrink:0;
+            color:#004A74;
+            font-size:1rem;
+          }
+          .mini-stat-label{
+            font-size:.78rem;
+            text-transform:uppercase;
+            letter-spacing:.06em;
+            color:#6b7280;
+            margin-bottom:.1rem;
+          }
+          .mini-stat-value{
+            font-size:.96rem;
+            font-weight:600;
+            color:#0f172a;
+          }
+          .mini-stat-sub{
+            font-size:.8rem;
+            color:#6b7280;
           }
 
           /* ===== Galeri Strip Geser di Bawah ===== */
@@ -304,6 +339,7 @@
             <!-- KANAN (KARTU INFO) -->
             <div class="col-lg-4">
               <div class="row g-3">
+                <!-- Fasilitas -->
                 <div class="col-12">
                   <div class="info-card">
                     <h6 class="mb-2" style="color:#004A74;">Fasilitas Utama</h6>
@@ -316,35 +352,70 @@
                   </div>
                 </div>
 
+                <!-- Info Lokasi & Pengelola (versi baru) -->
                 <div class="col-12">
                   <div class="info-card">
-                    <h6 class="mb-2" style="color:#004A74;">Info Lokasi & Pengelola</h6>
-                    <ul class="icon-list">
-                      <li>
+                    <h6 class="mb-3" style="color:#004A74;">Info Lokasi & Pengelola</h6>
+
+                    <div class="mini-stat">
+                      <div class="mini-stat-icon">
                         <i class="bi bi-bounding-box-circles"></i>
-                        Luas area Bumi Perkemahan Karang Pramuka ± <b>0,7–0,8 Ha</b> di Kaliurang, Sleman.
-                      </li>
-                      <li>
+                      </div>
+                      <div>
+                        <div class="mini-stat-label">Luas Bumi Perkemahan</div>
+                        <div class="mini-stat-value">± 0,7–0,8 Ha</div>
+                        <div class="mini-stat-sub">Kaliurang, Kabupaten Sleman</div>
+                      </div>
+                    </div>
+
+                    <div class="mini-stat">
+                      <div class="mini-stat-icon">
                         <i class="bi bi-building"></i>
-                        Pengelola: <b>Badan Pengelola Bumi Perkemahan Kwarda DIY (PRAMUKADIY)</b>.
-                      </li>
-                      <li>
+                      </div>
+                      <div>
+                        <div class="mini-stat-label">Pengelola</div>
+                        <div class="mini-stat-value">Badan Pengelola Bumi Perkemahan</div>
+                        <div class="mini-stat-sub">Kwartir Daerah Gerakan Pramuka DIY (PRAMUKADIY)</div>
+                      </div>
+                    </div>
+
+                    <div class="mini-stat">
+                      <div class="mini-stat-icon">
                         <i class="bi bi-diagram-3"></i>
-                        Kwarda DIY memiliki 2 bumi perkemahan:
-                        <b>Karang Pramuka Kaliurang</b> dan <b>Taman Tunas Wiguna Babarsari</b> (±9,35 Ha).
-                      </li>
-                      <li>
+                      </div>
+                      <div>
+                        <div class="mini-stat-label">Bumi Perkemahan Kwarda DIY</div>
+                        <div class="mini-stat-value">Karang Pramuka & Taman Tunas Wiguna</div>
+                        <div class="mini-stat-sub">Karang Pramuka (±0,7–0,8 Ha), Tunas Wiguna Babarsari (±9,35 Ha)</div>
+                      </div>
+                    </div>
+
+                    <div class="mini-stat">
+                      <div class="mini-stat-icon">
                         <i class="bi bi-clock-history"></i>
-                        Jam buka: <b>06.00–17.00 WIB</b>.
-                      </li>
-                      <li>
+                      </div>
+                      <div>
+                        <div class="mini-stat-label">Jam Operasional</div>
+                        <div class="mini-stat-value">06.00 – 17.00 WIB</div>
+                        <div class="mini-stat-sub">Setiap hari (pagi hingga sore)</div>
+                      </div>
+                    </div>
+
+                    <div class="mini-stat">
+                      <div class="mini-stat-icon">
                         <i class="bi bi-cash-coin"></i>
-                        Tidak ada tiket masuk khusus, namun berlaku retribusi parkir & sewa fasilitas (skuter, outbound, dll.).
-                      </li>
-                    </ul>
+                      </div>
+                      <div>
+                        <div class="mini-stat-label">Tiket & Retribusi</div>
+                        <div class="mini-stat-value">Tanpa tiket masuk khusus</div>
+                        <div class="mini-stat-sub">Pengunjung membayar parkir & sewa fasilitas (skuter, outbound, dll.)</div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
 
+                <!-- Kontak -->
                 <div class="col-12">
                   <div class="info-card">
                     <h6 class="mb-1" style="color:#004A74;">Kontak Pengelola</h6>
