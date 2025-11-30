@@ -51,6 +51,58 @@
       top: 100px;
       left: 15px;
     }
+
+    <style>
+
+    /* === CUSTOM THEME INFOBOX CESIUM === */
+    .cesium-infoBox {
+      background: #004A74 !important;
+      /* Warna header website */
+      border: 2px solid #003A5C !important;
+      border-radius: 10px !important;
+      color: white !important;
+    }
+
+    .cesium-infoBox-title {
+      background: #003A5C !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      padding: 10px !important;
+      font-size: 18px !important;
+    }
+
+    .cesium-infoBox-bodyless {
+      background: #004A74 !important;
+    }
+
+    .cesium-infoBox-description {
+      color: #ffffff !important;
+    }
+
+    /* Scrollbar mengikuti tema */
+    .cesium-infoBox-description::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .cesium-infoBox-description::-webkit-scrollbar-thumb {
+      background: #003A5C;
+      border-radius: 10px;
+    }
+
+    .cesium-infoBox-description::-webkit-scrollbar-track {
+      background: #005684;
+    }
+
+    /* Link text dalam popup */
+    .cesium-infoBox-description a {
+      color: #ffdd57 !important;
+    }
+
+    /* Gambar di popup */
+    .cesium-infoBox-description img {
+      border-radius: 10px;
+      border: 2px solid #003A5C;
+    }
   </style>
 </head>
 
@@ -87,12 +139,12 @@
     const modelAssets = [
       {
 
-        id: 4019777,
-        name: " ",
+        id: 4139221,
+        name: "DEM Area Buper",
         description: `
     <div style="text-align:center">
-      <h3>Perumahan Warga</h3>
-      <p>Perumahan Warga.</p>
+      <h3>DEM Area Bumi Perkemahan</h3>
+      <p>DEM Area Bumi Perkemahan</p>
       <ul style="text-align:left">
         <li><b>Lokasi:</b> Sleman, Yogyakarta</li>
         <li><b>Koordinat:</b> 110.427743° BT, -7.591640° LS</li>
@@ -104,11 +156,11 @@
 
       },
       {
-        id: 4019680,
+        id: 4173999,
         name: " ",
         description: `
-        <h3>Gapura</h3>
-        <p>Gapura Bumi Perkemahan.</p>
+        <h3>Perumahan Warga</h3>
+        <p>Kompleks Perumahan Warga</p>
         <ul>
           <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
           <li><b>Lokasi:</b> Bumi Perkemahan</li>
@@ -117,39 +169,190 @@
       `,
         coords: [110.428200, -7.591200, 50],
       },
-           {
-
-        id: 4019681,
-        name: " ",
-        description: `
-    <div style="text-align:center">
-      <h3>WC Putri</h3>
-      <img src="assets/img/wc.jpg" alt="wc" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
-      <p>Tempat buat pipis.</p>
-      <ul style="text-align:left">
-        <li><b>Lokasi:</b> Bumi Perkemahan Kaliurang</li>
-        <li><b>Koordinat:</b> 110.42786° BT, -7.59171° LS</li>
-      </ul>
-    </div>
-  `,
-        coords: [110.427743, -7.591640, 50],
-
-
-      },
       {
-        id: 4019675,
-        name: " ",
+        id: 4155532,
+        name: "Warung Bu Tuti",
         description: `
-        <h3>Warung Makan</h3>
-        <img src="assets/img/warung.png" alt="wc" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
-        <p>Tempat mengisi perut.</p>
+        <h3>Warung Bu Tuti</h3>
+        <p>Warung Bu Tuti Samping Fun Scoot</p>
         <ul>
-          <li><b>Lokasi:</b> Warung Makan</li>
-          <li><b>Koordinat:</b> 110.42713° BT, -7.59223° LS</li>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.427611° BT, -7.591714° LS</li>
         </ul>
       `,
-        coords: [110.428800, -7.592000, 50],
+        coords: [110.427611, -7.591714, 960],
+      },
+      {
+        id: 4155570,
+        name: "Villa Pribadi",
+        description: `
+        <h3>Villa Pribadi</h3>
+        <p>Villa Pribadi milik masyarakat sekitar.</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42754° BT, -7.59169° LS</li>
+        </ul>
+      `,
+        coords: [110.427611, -7.591714, 960],
+      },
+      {
+        id: 4155625,
+        name: "Wedangan Lodji",
+        description: `
+        <h3>Wedangan Lodji</h3>
+        <p>Restoran Wedang yang menyediakan berbagai makanan</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
+      },
+      {
+        id: 4155459,
+        name: "WC Putri",
+        description: `
+        <h3>Wedangan Lodji</h3>
+        <p>Restoran Wedang yang menyediakan berbagai makanan</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
+      },
+      {
+        id: 4155482,
+        name: "WC 2",
+        description: `
+        <h3>Wedangan Lodji</h3>
+        <p>Restoran Wedang yang menyediakan berbagai makanan</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
+      },
+      {
+        id: 4155491,
+        name: "Warung Samping",
+        description: `
+        <h3>Wedangan Lodji</h3>
+        <p>Restoran Wedang yang menyediakan berbagai makanan</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
+      },
+      {
+        id: 4155517,
+        name: "Gapura Bumi Perkemahan Karang Pramuka",
+        description: `
+        <h3>Gapura Bumi Perkemahan Karang Pramuka</h3>
+        <p>Pintu masuk menuju Bumi Perkemahan Karang Pramuka</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
+      },
+      {
+        id: 4174017,
+        name: "Vila Putih",
+        description: `
+        <h3>Wedangan Lodji</h3>
+        <p>Restoran Wedang yang menyediakan berbagai makanan</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
+      },
+      {
+        id: 4174021,
+        name: "Bangunan Rusak",
+        description: `
+        <h3>Wedangan Lodji</h3>
+        <p>Restoran Wedang yang menyediakan berbagai makanan</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
+      },
+            {
+        id: 4155671,
+        name: "Pohon Beringin",
+        description: `
+        <h3>Wedangan Lodji</h3>
+        <p>Restoran Wedang yang menyediakan berbagai makanan</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
+      },
+      {
+        id: 4155689,
+        name: "Pohon Beringin",
+        description: `
+        <h3>Gapura Bumi Perkemahan Karang Pramuka</h3>
+        <p>Pintu masuk menuju Bumi Perkemahan Karang Pramuka</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
+      },
+      {
+        id: 4155714,
+        name: "Pohon Beringin",
+        description: `
+        <h3>Wedangan Lodji</h3>
+        <p>Restoran Wedang yang menyediakan berbagai makanan</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
+      },
+      {
+        id: 4155733,
+        name: "Pohon Beringin",
+        description: `
+        <h3>Wedangan Lodji</h3>
+        <p>Restoran Wedang yang menyediakan berbagai makanan</p>
+        <ul>
+          <img src="assets/img/gapura.jpg" alt="Gapura" style="width:100%;max-width:300px;border-radius:8px;margin:10px 0;">
+          <li><b>Lokasi:</b> Bumi Perkemahan</li>
+          <li><b>Koordinat:</b> 110.42733° BT, -7.59176° LS</li>
+        </ul>
+      `,
+        coords: [110.42733, -7.59176, 960],
       }
+
+
     ];
 
     // Ganti dengan token milik kamu sendiri dari Cesium Ion
@@ -158,8 +361,8 @@
 
     // ========== INISIALISASI VIEWER ==========
     const viewer = new Cesium.Viewer('cesiumContainer', {
-      terrainProvider: new Cesium.EllipsoidTerrainProvider(), // 🌍 permukaan datar
-      baseLayerPicker: false,  // opsional: hilangkan tombol pilih base layer
+      terrain: Cesium.Terrain.fromWorldTerrain(),
+      baseLayerPicker: false
     });
 
 
@@ -190,7 +393,7 @@
 
     // ========== ATUR POSISI KAMERA ==========
     viewer.camera.flyTo({
-      destination: Cesium.Cartesian3.fromDegrees(110.42785, -7.594990, 150),
+      destination: Cesium.Cartesian3.fromDegrees(110.427479, -7.596880, 1200),
       orientation: {
         heading: Cesium.Math.toRadians(0),
         pitch: Cesium.Math.toRadians(-25),
