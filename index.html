@@ -105,7 +105,7 @@
 
 
     <main id="main">
-                 <!-- ======= About Section (Teks + Galeri Geser di Bawah) ======= -->
+            <!-- ======= About Section (Teks + Galeri Geser di Bawah) ======= -->
       <section id="about" class="py-5 bg-light">
 
         <style>
@@ -161,7 +161,7 @@
             margin-top:.2rem;
           }
 
-          /* Mini stat di kartu kanan */
+          /* Mini stat di kartu kanan (biar nggak berantakan) */
           .mini-stat{
             display:flex;
             gap:.75rem;
@@ -257,10 +257,10 @@
         </style>
 
         <div class="container" data-aos="fade-up">
-          <!-- ROW TEKS & SIDEBAR -->
+          <!-- ROW TEKS & KARTU -->
           <div class="row g-5 align-items-start">
 
-            <!-- KIRI (TEKS PANJANG) -->
+            <!-- KIRI (TEKS) -->
             <div class="col-lg-8">
               <div class="mb-2 text-uppercase small text-secondary fw-semibold">TENTANG LOKASI</div>
               <h2 class="title-accent mb-3">Bumi Perkemahan Karang Pramuka</h2>
@@ -336,40 +336,42 @@
               </div>
             </div>
 
-            <!-- KANAN (SIDEBAR: FACTS + MAP + INFO) -->
+            <!-- QUICK FACTS -->
+            <div class="col-12">
+              <div class="info-card">
+                <h6 class="mb-2" style="color:#004A74;">Quick Facts</h6>
+                <ul class="icon-list">
+                  <li><i class="bi bi-geo-alt-fill"></i> Elevasi: ±900 mdpl</li>
+                  <li><i class="bi bi-thermometer-half"></i> Suhu: 18 – 24 °C</li>
+                  <li><i class="bi bi-car-front-fill"></i> Akses: mobil & bus kecil</li>
+                  <li><i class="bi bi-stars"></i> Aktivitas: camping, outbound, skuter</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- MINI MAP -->
+            <div class="col-12">
+              <div class="info-card">
+                <h6 class="mb-2" style="color:#004A74;">Peta Lokasi</h6>
+
+                <iframe 
+                  src="https://www.google.com/maps?q=Bumi+Perkemahan+Karang+Pramuka+Kaliurang&output=embed"
+                  width="100%" height="230"
+                  style="border-radius:12px;border:0;"
+                  loading="lazy">
+                </iframe>
+
+                <small style="color:#6b7280;">
+                  Kaliurang, Hargobinangun – Sleman, DIY
+                </small>
+              </div>
+            </div>
+
+
+            <!-- KANAN (KARTU INFO) -->
             <div class="col-lg-4">
               <div class="row g-3">
-
-                <!-- QUICK FACTS -->
-                <div class="col-12">
-                  <div class="info-card">
-                    <h6 class="mb-2" style="color:#004A74;">Quick Facts</h6>
-                    <ul class="icon-list">
-                      <li><i class="bi bi-geo-alt-fill"></i> Elevasi: ±900 mdpl</li>
-                      <li><i class="bi bi-thermometer-half"></i> Suhu: 18 – 24 °C</li>
-                      <li><i class="bi bi-car-front-fill"></i> Akses: mobil & bus kecil</li>
-                      <li><i class="bi bi-stars"></i> Aktivitas: camping, outbound, skuter</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- MINI MAP -->
-                <div class="col-12">
-                  <div class="info-card">
-                    <h6 class="mb-2" style="color:#004A74;">Peta Lokasi</h6>
-                    <iframe 
-                      src="https://www.google.com/maps?q=Bumi+Perkemahan+Karang+Pramuka+Kaliurang&output=embed"
-                      width="100%" height="230"
-                      style="border-radius:12px;border:0;"
-                      loading="lazy">
-                    </iframe>
-                    <small style="color:#6b7280;">
-                      Kaliurang, Hargobinangun – Sleman, DIY
-                    </small>
-                  </div>
-                </div>
-
-                <!-- Fasilitas Utama -->
+                <!-- Fasilitas -->
                 <div class="col-12">
                   <div class="info-card">
                     <h6 class="mb-2" style="color:#004A74;">Fasilitas Utama</h6>
@@ -382,7 +384,7 @@
                   </div>
                 </div>
 
-                <!-- Info Lokasi & Pengelola -->
+                <!-- Info Lokasi & Pengelola (versi baru) -->
                 <div class="col-12">
                   <div class="info-card">
                     <h6 class="mb-3" style="color:#004A74;">Info Lokasi & Pengelola</h6>
@@ -438,14 +440,14 @@
                       <div>
                         <div class="mini-stat-label">Tiket & Retribusi</div>
                         <div class="mini-stat-value">Tanpa tiket masuk khusus</div>
-                        <div class="mini-stat-sub">Parkir & sewa fasilitas (skuter, outbound, dll.)</div>
+                        <div class="mini-stat-sub">Pengunjung membayar parkir & sewa fasilitas (skuter, outbound, dll.)</div>
                       </div>
                     </div>
 
                   </div>
                 </div>
 
-                <!-- Kontak Pengelola -->
+                <!-- Kontak -->
                 <div class="col-12">
                   <div class="info-card">
                     <h6 class="mb-1" style="color:#004A74;">Kontak Pengelola</h6>
@@ -458,13 +460,12 @@
                     </p>
                   </div>
                 </div>
-
               </div>
             </div>
 
           </div>
 
-          <!-- GALERI FOTO DI BAWAH TEKS + SIDEBAR -->
+          <!-- GALERI FOTO DI BAWAH -->
           <div class="about-gallery-strip mt-5" data-aos="fade-up" data-aos-delay="150">
             <div class="d-flex justify-content-between align-items-center mb-3">
               <div>
@@ -505,8 +506,8 @@
               </figure>
 
               <figure class="about-gallery-item">
-                <img src="assets/img/warung.png" alt="Warung sekitar lokasi">
-                <figcaption>Warung di sekitar lokasi untuk kebutuhan makan dan minum pengunjung.</figcaption>
+                <img src="assets/img/warung.png" alt="Musholla dan fasilitas penunjang">
+                <figcaption>Warung disekitar lokasi untuk makan/minum wisatawan.</figcaption>
               </figure>
             </div>
           </div>
@@ -514,7 +515,6 @@
         </div>
       </section>
       <!-- ======= End About ======= -->
-
 
 
       <!-- ======= Why Us Section ======= -->
@@ -666,18 +666,18 @@
                 <p style="margin-bottom:6px;"><b>Anggota :</b></p>
 
                 <ol style="line-height:1.9; text-align:justify; padding-left:22px;">
-                  <li>Prof. Ir. Trias Aditya Kurniawan M, S.T., M.Sc., Ph.D., IPU, ASEAN Eng. (DTGd) – Penanggungjawab</li>
-                  <li>Ir. Rochmad Muryamto, M.Eng.Sc. (DTGd) – Anggota</li>
-                  <li>Dr. Ir. Diyono, S.T., M.T., IPU. (DTGd) – Anggota</li>
-                  <li>Prof. Ir. Nurrohmat Widjajanti, M.T., Ph.D., IPU, ASEAN Eng., APEC Eng. (DTGd) – Anggota</li>
-                  <li>Dr. Eng. Ir. Purnama Budi Santosa, S.T., M.App.Sc., IPM. (DTGd) – Anggota</li>
-                  <li>Ir. Heri Sutanta, S.T., M.Sc., Ph.D. (DTGd) – Anggota</li>
-                  <li>Dr. Bambang Kun Cahyono, S.T., M.Sc. (DTGd) – Anggota</li>
-                  <li>Ir. Ruli Andaru, S.T., M.Eng., Ph.D. (DTGd) – Anggota</li>
-                  <li>Dr. Bilal Ma'ruf, S.T., M.T. (DTGd) – Anggota</li>
-                  <li>Iqbal Hanun Azizi, A.Md. (DTGd) – Anggota</li>
-                  <li>Zulfian Isnaini Cahya, S.Si. (DTGd) – Anggota</li>
-                  <li>Andris Sudaryanto (DTGd) – Anggota</li>
+                  <li>Prof. Ir. Trias Aditya Kurniawan M, S.T., M.Sc., Ph.D., IPU, ASEAN Eng. – Penanggung Jawab</li>
+                  <li>Ir. Rochmad Muryamto, M.Eng.Sc. – Anggota</li>
+                  <li>Dr. Ir. Diyono, S.T., M.T., IPU. – Anggota</li>
+                  <li>Prof. Ir. Nurrohmat Widjajanti, M.T., Ph.D., IPU, ASEAN Eng., APEC Eng. – Anggota</li>
+                  <li>Dr. Eng. Ir. Purnama Budi Santosa, S.T., M.App.Sc., IPM. – Anggota</li>
+                  <li>Ir. Heri Sutanta, S.T., M.Sc., Ph.D. – Anggota</li>
+                  <li>Dr. Bambang Kun Cahyono, S.T., M.Sc.  – Anggota</li>
+                  <li>Ir. Ruli Andaru, S.T., M.Eng., Ph.D.  – Anggota</li>
+                  <li>Dr. Bilal Ma'ruf, S.T., M.T. – Anggota</li>
+                  <li>Iqbal Hanun Azizi, A.Md. – Anggota</li>
+                  <li>Zulfian Isnaini Cahya, S.Si. – Anggota</li>
+                  <li>Andris Sudaryanto  – Anggota</li>
                 </ol>
 
               </div>
@@ -705,7 +705,7 @@
                 <ol style="line-height:1.9; text-align:justify; padding-left:22px;">
                   <li>
                     <b>Fiqri Fahra, S.T.</b><br>
-                    NIM: 21/473296/TK/52153 – Teknik Geodesi
+                    NIM: 24/541049/TK/15927 – Teknik Geodesi
                   </li>
                   <li>
                     <b>M. Azhar Rafi' Samudra, S.T.</b><br>
@@ -714,6 +714,26 @@
                   <li>
                     <b>Azis Mulya Affandy, S.T.</b><br>
                     NIM: 24/541058/PTK/15934 – Teknik Geodesi
+                  </li>
+                  <li>
+                    <b>Hasnatyas Surya Tsabita</b><br>
+                    NIM: 22/493553/TK/54076 – Teknik Geodesi
+                  </li>
+                  <li>
+                    <b>Putri Kartika Nurillah</b><br>
+                    NIM: 22/494407/TK/54226 – Teknik Geodesi
+                  </li>
+                  <li>
+                    <b>Alif Karim</b><br>
+                    NIM: 22/498755/TK/54719 – Teknik Geodesi
+                  </li>
+                  <li>
+                    <b>Azhar Aryananta Pradana</b><br>
+                    NIM: 22/499981/TK/54783 – Teknik Geodesi
+                  </li>
+                  <li>
+                    <b>Salma Arifa Tsani</b><br>
+                    NIM: 22/505826/TK/55379 – Teknik Geodesi
                   </li>
                 </ol>
 
