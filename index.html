@@ -105,416 +105,416 @@
 
 
     <main id="main">
-            <!-- ======= About Section (Teks + Galeri Geser di Bawah) ======= -->
-      <section id="about" class="py-5 bg-light">
+                    <!-- ======= About Section (Teks + Galeri Geser di Bawah) ======= -->
+        <section id="about" class="py-5 bg-light">
 
-        <style>
-          .title-accent{
-            font-weight: 800;
-            letter-spacing:.3px;
-            background: linear-gradient(90deg,#004A74 0%, #0ea5b6 100%);
-            -webkit-background-clip:text;
-            background-clip:text;
-            color: transparent;
-          }
-          .lead-geo{
-            font-size:1.05rem;
-            line-height:1.9;
-            text-align: justify;
-          }
+          <style>
+            .title-accent{
+              font-weight: 800;
+              letter-spacing:.3px;
+              background: linear-gradient(90deg,#004A74 0%, #0ea5b6 100%);
+              -webkit-background-clip:text;
+              background-clip:text;
+              color: transparent;
+            }
+            .lead-geo{
+              font-size:1.05rem;
+              line-height:1.9;
+              text-align: justify;
+            }
 
-          /* Chips */
-          .info-chip{
-            border-radius: 999px;
-            padding:.45rem .9rem;
-            font-size:.85rem;
-            background:#e6f4ff;
-            color:#004A74;
-            display:inline-flex;
-            align-items:center;
-            gap:.35rem;
-          }
+            /* Chips */
+            .info-chip{
+              border-radius: 999px;
+              padding:.45rem .9rem;
+              font-size:.85rem;
+              background:#e6f4ff;
+              color:#004A74;
+              display:inline-flex;
+              align-items:center;
+              gap:.35rem;
+            }
 
-          /* Cards */
-          .info-card{
-            border-radius:14px;
-            border:1px solid rgba(0,0,0,.06);
-            padding:1rem 1.2rem;
-            background:#fff;
-            height:100%;
-          }
+            /* Cards */
+            .info-card{
+              border-radius:14px;
+              border:1px solid rgba(0,0,0,.06);
+              padding:1rem 1.2rem;
+              background:#fff;
+              height:100%;
+            }
 
-          .icon-list{
-            padding-left:0;
-            margin:0;
-            list-style:none;
-          }
-          .icon-list li{
-            margin-bottom:.45rem;
-            display:flex;
-            gap:.5rem;
-            align-items:flex-start;
-            font-size:.95rem;
-          }
-          .icon-list li i{
-            color:#0ea5b6;
-            margin-top:.2rem;
-          }
+            .icon-list{
+              padding-left:0;
+              margin:0;
+              list-style:none;
+            }
+            .icon-list li{
+              margin-bottom:.45rem;
+              display:flex;
+              gap:.5rem;
+              align-items:flex-start;
+              font-size:.95rem;
+            }
+            .icon-list li i{
+              color:#0ea5b6;
+              margin-top:.2rem;
+            }
 
-          /* Mini stat di kartu kanan (biar nggak berantakan) */
-          .mini-stat{
-            display:flex;
-            gap:.75rem;
-            margin-bottom:.9rem;
-          }
-          .mini-stat-icon{
-            width:34px;
-            height:34px;
-            border-radius:999px;
-            background:#e6f4ff;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            flex-shrink:0;
-            color:#004A74;
-            font-size:1rem;
-          }
-          .mini-stat-label{
-            font-size:.78rem;
-            text-transform:uppercase;
-            letter-spacing:.06em;
-            color:#6b7280;
-            margin-bottom:.1rem;
-          }
-          .mini-stat-value{
-            font-size:.96rem;
-            font-weight:600;
-            color:#0f172a;
-          }
-          .mini-stat-sub{
-            font-size:.8rem;
-            color:#6b7280;
-          }
+            /* Mini stat di kartu kanan */
+            .mini-stat{
+              display:flex;
+              gap:.75rem;
+              margin-bottom:.9rem;
+            }
+            .mini-stat-icon{
+              width:34px;
+              height:34px;
+              border-radius:999px;
+              background:#e6f4ff;
+              display:flex;
+              align-items:center;
+              justify-content:center;
+              flex-shrink:0;
+              color:#004A74;
+              font-size:1rem;
+            }
+            .mini-stat-label{
+              font-size:.78rem;
+              text-transform:uppercase;
+              letter-spacing:.06em;
+              color:#6b7280;
+              margin-bottom:.1rem;
+            }
+            .mini-stat-value{
+              font-size:.96rem;
+              font-weight:600;
+              color:#0f172a;
+            }
+            .mini-stat-sub{
+              font-size:.8rem;
+              color:#6b7280;
+            }
 
-          /* ===== Galeri Strip Geser di Bawah ===== */
-          .about-gallery-strip{
-            margin-top:2.75rem;
-            border-radius:20px;
-            background:#ffffff;
-            padding:1.2rem 1.5rem 1.6rem;
-            box-shadow:0 18px 45px rgba(15,23,42,.12);
-          }
-          .about-gallery-track{
-            display:flex;
-            gap:1rem;
-            overflow-x:auto;
-            padding-bottom:.5rem;
-            scroll-snap-type:x mandatory;
-            -webkit-overflow-scrolling:touch;
-          }
-          .about-gallery-track::-webkit-scrollbar{
-            height:6px;
-          }
-          .about-gallery-track::-webkit-scrollbar-track{
-            background:transparent;
-          }
-          .about-gallery-track::-webkit-scrollbar-thumb{
-            background:#cbd5f5;
-            border-radius:999px;
-          }
-          .about-gallery-item{
-            flex:0 0 280px;
-            border-radius:18px;
-            overflow:hidden;
-            position:relative;
-            scroll-snap-align:start;
-            background:#000;
-          }
-          .about-gallery-item img{
-            width:100%;
-            height:190px;
-            object-fit:cover;
-            display:block;
-          }
-          .about-gallery-item figcaption{
-            position:absolute;
-            left:0;
-            right:0;
-            bottom:0;
-            padding:.6rem .9rem .8rem;
-            font-size:.85rem;
-            color:#fff;
-            background:linear-gradient(180deg,rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 100%);
-          }
-          @media (min-width: 992px){
+            /* ===== Galeri Strip Geser di Bawah ===== */
+            .about-gallery-strip{
+              margin-top:2.75rem;
+              border-radius:20px;
+              background:#ffffff;
+              padding:1.2rem 1.5rem 1.6rem;
+              box-shadow:0 18px 45px rgba(15,23,42,.12);
+            }
+            .about-gallery-track{
+              display:flex;
+              gap:1rem;
+              overflow-x:auto;
+              padding-bottom:.5rem;
+              scroll-snap-type:x mandatory;
+              -webkit-overflow-scrolling:touch;
+            }
+            .about-gallery-track::-webkit-scrollbar{
+              height:6px;
+            }
+            .about-gallery-track::-webkit-scrollbar-track{
+              background:transparent;
+            }
+            .about-gallery-track::-webkit-scrollbar-thumb{
+              background:#cbd5f5;
+              border-radius:999px;
+            }
             .about-gallery-item{
-              flex:0 0 320px;
+              flex:0 0 280px;
+              border-radius:18px;
+              overflow:hidden;
+              position:relative;
+              scroll-snap-align:start;
+              background:#000;
             }
             .about-gallery-item img{
-              height:210px;
+              width:100%;
+              height:190px;
+              object-fit:cover;
+              display:block;
             }
-          }
-        </style>
+            .about-gallery-item figcaption{
+              position:absolute;
+              left:0;
+              right:0;
+              bottom:0;
+              padding:.6rem .9rem .8rem;
+              font-size:.85rem;
+              color:#fff;
+              background:linear-gradient(180deg,rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 100%);
+            }
+            @media (min-width: 992px){
+              .about-gallery-item{
+                flex:0 0 320px;
+              }
+              .about-gallery-item img{
+                height:210px;
+              }
+            }
+          </style>
 
-        <div class="container" data-aos="fade-up">
-          <!-- ROW TEKS & KARTU -->
-          <div class="row g-5 align-items-start">
+          <div class="container" data-aos="fade-up">
+            <!-- ROW TEKS & SIDEBAR -->
+            <div class="row g-5 align-items-start">
 
-            <!-- KIRI (TEKS) -->
-            <div class="col-lg-8">
-              <div class="mb-2 text-uppercase small text-secondary fw-semibold">TENTANG LOKASI</div>
-              <h2 class="title-accent mb-3">Bumi Perkemahan Karang Pramuka</h2>
+              <!-- KIRI (TEKS PANJANG) -->
+              <div class="col-lg-8">
+                <div class="mb-2 text-uppercase small text-secondary fw-semibold">TENTANG LOKASI</div>
+                <h2 class="title-accent mb-3">Bumi Perkemahan Karang Pramuka</h2>
 
-              <p class="lead-geo">
-                Bumi Perkemahan Karang Pramuka adalah kawasan perkemahan dan wisata alam yang terletak di
-                Kaliurang, Hargobinangun, Kecamatan Pakem, Sleman, DI Yogyakarta. Berada di lereng selatan
-                Gunung Merapi, kawasan ini menawarkan suasana pegunungan yang sejuk, dikelilingi hutan pinus
-                serta vegetasi hijau yang masih terjaga.
-              </p>
+                <p class="lead-geo">
+                  Bumi Perkemahan Karang Pramuka adalah kawasan perkemahan dan wisata alam yang terletak di
+                  Kaliurang, Hargobinangun, Kecamatan Pakem, Sleman, DI Yogyakarta. Berada di lereng selatan
+                  Gunung Merapi, kawasan ini menawarkan suasana pegunungan yang sejuk, dikelilingi hutan pinus
+                  serta vegetasi hijau yang masih terjaga.
+                </p>
 
-              <p class="lead-geo">
-                Lapangan yang luas dan hawa dingin khas dataran tinggi menjadikan Karang Pramuka sangat cocok untuk
-                kegiatan pramuka, camping, <i>outbound</i>, pendidikan karakter, hingga acara sekolah dan organisasi.
-                Lingkungannya aman, nyaman, dan asri sehingga menjadi lokasi favorit pelajar, komunitas,
-                hingga keluarga yang ingin menikmati alam Yogyakarta secara lebih dekat.
-              </p>
+                <p class="lead-geo">
+                  Lapangan yang luas dan hawa dingin khas dataran tinggi menjadikan Karang Pramuka sangat cocok untuk
+                  kegiatan pramuka, camping, <i>outbound</i>, pendidikan karakter, hingga acara sekolah dan organisasi.
+                  Lingkungannya aman, nyaman, dan asri sehingga menjadi lokasi favorit pelajar, komunitas,
+                  hingga keluarga yang ingin menikmati alam Yogyakarta secara lebih dekat.
+                </p>
 
-              <p class="lead-geo">
-                Lokasi ini juga dekat dengan berbagai destinasi wisata Kaliurang, seperti Tlogo Putri, Kopi Klotok,
-                Museum Petilasan Mbah Maridjan, serta Hutan Pinus Ngandong. Waktu tempuh menuju Karang Pramuka sekitar
-                <b>54 menit</b> dari pusat Kota Yogyakarta, dengan jarak ± <b>26 km</b> melalui jalan besar yang nyaman dilalui
-                kendaraan kecil maupun rombongan besar.
-              </p>
+                <p class="lead-geo">
+                  Lokasi ini juga dekat dengan berbagai destinasi wisata Kaliurang, seperti Tlogo Putri, Kopi Klotok,
+                  Museum Petilasan Mbah Maridjan, serta Hutan Pinus Ngandong. Waktu tempuh menuju Karang Pramuka sekitar
+                  <b>54 menit</b> dari pusat Kota Yogyakarta, dengan jarak ± <b>26 km</b> melalui jalan besar yang nyaman dilalui
+                  kendaraan kecil maupun rombongan besar.
+                </p>
 
-              <p class="lead-geo">
-                Dalam struktur <b>PRAMUKADIY</b>, pengelolaan Bumi Perkemahan Karang Pramuka berada di bawah
-                <b>Badan Pengelola Bumi Perkemahan</b> Kwartir Daerah Gerakan Pramuka Daerah Istimewa Yogyakarta
-                (Kwarda DIY) masa bakti 2020–2025. Badan ini merupakan bagian integral dari kwartir yang bertugas
-                melaksanakan kebijakan Kwarda tentang pendayagunaan dan pengelolaan bumi perkemahan secara teknis.
-              </p>
+                <p class="lead-geo">
+                  Dalam struktur <b>PRAMUKADIY</b>, pengelolaan Bumi Perkemahan Karang Pramuka berada di bawah
+                  <b>Badan Pengelola Bumi Perkemahan</b> Kwartir Daerah Gerakan Pramuka Daerah Istimewa Yogyakarta
+                  (Kwarda DIY) masa bakti 2020–2025. Badan ini merupakan bagian integral dari kwartir yang bertugas
+                  melaksanakan kebijakan Kwarda tentang pendayagunaan dan pengelolaan bumi perkemahan secara teknis.
+                </p>
 
-              <p class="lead-geo">
-                Tugasnya antara lain menyusun dan melaksanakan program pendayagunaan dan pengelolaan bumi perkemahan,
-                melakukan inventarisasi aset, menjalin kerja sama dengan pihak terkait untuk mengoptimalkan pemanfaatan
-                bumi perkemahan, serta melaporkan hasil pendayagunaan dan pengelolaan kepada Kwartir Daerah. Dalam
-                pelaksanaannya, badan ini bertanggung jawab kepada Ketua Kwartir Daerah dan senantiasa berkoordinasi,
-                berkomunikasi, dan berkonsultasi dengan Wakil Ketua Kwarda DIY/Ketua Bidang Sarana dan Prasarana serta
-                andalan terkait.
-              </p>
+                <p class="lead-geo">
+                  Tugasnya antara lain menyusun dan melaksanakan program pendayagunaan dan pengelolaan bumi perkemahan,
+                  melakukan inventarisasi aset, menjalin kerja sama dengan pihak terkait untuk mengoptimalkan pemanfaatan
+                  bumi perkemahan, serta melaporkan hasil pendayagunaan dan pengelolaan kepada Kwartir Daerah. Dalam
+                  pelaksanaannya, badan ini bertanggung jawab kepada Ketua Kwartir Daerah dan senantiasa berkoordinasi,
+                  berkomunikasi, dan berkonsultasi dengan Wakil Ketua Kwarda DIY/Ketua Bidang Sarana dan Prasarana serta
+                  andalan terkait.
+                </p>
 
-              <p class="lead-geo">
-                Badan Pengelola Bumi Perkemahan Kwarda DIY masa bakti 2020–2025 dikepalai oleh
-                <b>Kak Kamtiyana, S.Hut.T</b> dengan <b>Kak Suharto, S.H.</b> sebagai Wakil. Dalam menjalankan tugas,
-                mereka dibantu enam anggota, yaitu Kak Susanti, M.Pd.; Kak Respati Pratiwi Widyastuti;
-                Kak Idris Suyatno; Kak Amin Sapto Nugroho; Kak M. Farid Fauzi, M.Kom.; serta
-                Kak Tri Mahardi, S.IP., S.H., M.H. Anggota ini terbagi dalam dua bidang, yaitu
-                <i>Bidang Umum</i> (Seksi Admin, Seksi Kebersihan, dan Seksi Pekerjaan Umum) serta
-                <i>Bidang Pemasaran</i> (Seksi Pemasaran).
-              </p>
+                <p class="lead-geo">
+                  Badan Pengelola Bumi Perkemahan Kwarda DIY masa bakti 2020–2025 dikepalai oleh
+                  <b>Kak Kamtiyana, S.Hut.T</b> dengan <b>Kak Suharto, S.H.</b> sebagai Wakil. Dalam menjalankan tugas,
+                  mereka dibantu enam anggota, yaitu Kak Susanti, M.Pd.; Kak Respati Pratiwi Widyastuti;
+                  Kak Idris Suyatno; Kak Amin Sapto Nugroho; Kak M. Farid Fauzi, M.Kom.; serta
+                  Kak Tri Mahardi, S.IP., S.H., M.H. Anggota ini terbagi dalam dua bidang, yaitu
+                  <i>Bidang Umum</i> (Seksi Admin, Seksi Kebersihan, dan Seksi Pekerjaan Umum) serta
+                  <i>Bidang Pemasaran</i> (Seksi Pemasaran).
+                </p>
 
-              <p class="lead-geo">
-                Secara historis, Bumi Perkemahan Karang Pramuka Kaliurang telah menjadi lokasi penting
-                kegiatan kepramukaan. Salah satu momentum bersejarahnya adalah <b>Kemah Khusus Putri</b> yang
-                diselenggarakan pada <b>15–17 Juni 1979</b>, digagas oleh Kak Basu Asti dan Kak Dian Siswantari
-                dengan dukungan para pembina Pramuka untuk menyemangati Pramuka putri. Selain kegiatan khusus tersebut,
-                area ini juga kerap digunakan sebagai salah satu lokasi utama kegiatan kepramukaan di Yogyakarta.
-              </p>
+                <p class="lead-geo">
+                  Secara historis, Bumi Perkemahan Karang Pramuka Kaliurang telah menjadi lokasi penting
+                  kegiatan kepramukaan. Salah satu momentum bersejarahnya adalah <b>Kemah Khusus Putri</b> yang
+                  diselenggarakan pada <b>15–17 Juni 1979</b>, digagas oleh Kak Basu Asti dan Kak Dian Siswantari
+                  dengan dukungan para pembina Pramuka untuk menyemangati Pramuka putri. Selain kegiatan khusus tersebut,
+                  area ini juga kerap digunakan sebagai salah satu lokasi utama kegiatan kepramukaan di Yogyakarta.
+                </p>
 
-              <p class="lead-geo">
-                Kini, Karang Pramuka berkembang menjadi objek wisata alam yang menawarkan berbagai aktivitas modern
-                seperti sewa skuter dan sepeda listrik, outbound ringan, serta area perkemahan keluarga. Pengunjung
-                tidak dikenai tiket masuk khusus ke area utama, namun membayar retribusi parkir sesuai jenis kendaraan
-                dan biaya sewa fasilitas tambahan. Area ini buka setiap hari mulai sekitar <b>06.00–17.00 WIB</b>,
-                sehingga sangat cocok untuk menikmati udara pagi maupun sore yang sejuk di lereng Gunung Merapi.
-              </p>
+                <p class="lead-geo">
+                  Kini, Karang Pramuka berkembang menjadi objek wisata alam yang menawarkan berbagai aktivitas modern
+                  seperti sewa skuter dan sepeda listrik, outbound ringan, serta area perkemahan keluarga. Pengunjung
+                  tidak dikenai tiket masuk khusus ke area utama, namun membayar retribusi parkir sesuai jenis kendaraan
+                  dan biaya sewa fasilitas tambahan. Area ini buka setiap hari mulai sekitar <b>06.00–17.00 WIB</b>,
+                  sehingga sangat cocok untuk menikmati udara pagi maupun sore yang sejuk di lereng Gunung Merapi.
+                </p>
 
-              <!-- Chips -->
-              <div class="d-flex flex-wrap gap-2 mb-4">
-                <span class="info-chip"><i class="bi bi-tree-fill"></i> Udara sejuk pegunungan</span>
-                <span class="info-chip"><i class="bi bi-people-fill"></i> Cocok untuk rombongan</span>
-                <span class="info-chip"><i class="bi bi-geo-alt-fill"></i> Dekat wisata Kaliurang</span>
+                <!-- Chips -->
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <span class="info-chip"><i class="bi bi-tree-fill"></i> Udara sejuk pegunungan</span>
+                  <span class="info-chip"><i class="bi bi-people-fill"></i> Cocok untuk rombongan</span>
+                  <span class="info-chip"><i class="bi bi-geo-alt-fill"></i> Dekat wisata Kaliurang</span>
+                </div>
               </div>
+
+              <!-- KANAN (SIDEBAR: FACTS + MAP + INFO) -->
+              <div class="col-lg-4">
+                <div class="row g-3">
+
+                  <!-- QUICK FACTS -->
+                  <div class="col-12">
+                    <div class="info-card">
+                      <h6 class="mb-2" style="color:#004A74;">Quick Facts</h6>
+                      <ul class="icon-list">
+                        <li><i class="bi bi-geo-alt-fill"></i> Elevasi: ±900 mdpl</li>
+                        <li><i class="bi bi-thermometer-half"></i> Suhu: 18 – 24 °C</li>
+                        <li><i class="bi bi-car-front-fill"></i> Akses: mobil & bus kecil</li>
+                        <li><i class="bi bi-stars"></i> Aktivitas: camping, outbound, skuter</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- MINI MAP -->
+                  <div class="col-12">
+                    <div class="info-card">
+                      <h6 class="mb-2" style="color:#004A74;">Peta Lokasi</h6>
+                      <iframe 
+                        src="https://www.google.com/maps?q=Bumi+Perkemahan+Karang+Pramuka+Kaliurang&output=embed"
+                        width="100%" height="230"
+                        style="border-radius:12px;border:0;"
+                        loading="lazy">
+                      </iframe>
+                      <small style="color:#6b7280;">
+                        Kaliurang, Hargobinangun – Sleman, DIY
+                      </small>
+                    </div>
+                  </div>
+
+                  <!-- Fasilitas Utama -->
+                  <div class="col-12">
+                    <div class="info-card">
+                      <h6 class="mb-2" style="color:#004A74;">Fasilitas Utama</h6>
+                      <ul class="icon-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Musholla</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Kamar mandi & toilet</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Gazebo & area istirahat</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Camping ground luas</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Info Lokasi & Pengelola -->
+                  <div class="col-12">
+                    <div class="info-card">
+                      <h6 class="mb-3" style="color:#004A74;">Info Lokasi & Pengelola</h6>
+
+                      <div class="mini-stat">
+                        <div class="mini-stat-icon">
+                          <i class="bi bi-bounding-box-circles"></i>
+                        </div>
+                        <div>
+                          <div class="mini-stat-label">Luas Bumi Perkemahan</div>
+                          <div class="mini-stat-value">± 0,7–0,8 Ha</div>
+                          <div class="mini-stat-sub">Kaliurang, Kabupaten Sleman</div>
+                        </div>
+                      </div>
+
+                      <div class="mini-stat">
+                        <div class="mini-stat-icon">
+                          <i class="bi bi-building"></i>
+                        </div>
+                        <div>
+                          <div class="mini-stat-label">Pengelola</div>
+                          <div class="mini-stat-value">Badan Pengelola Bumi Perkemahan</div>
+                          <div class="mini-stat-sub">Kwartir Daerah Gerakan Pramuka DIY (PRAMUKADIY)</div>
+                        </div>
+                      </div>
+
+                      <div class="mini-stat">
+                        <div class="mini-stat-icon">
+                          <i class="bi bi-diagram-3"></i>
+                        </div>
+                        <div>
+                          <div class="mini-stat-label">Bumi Perkemahan Kwarda DIY</div>
+                          <div class="mini-stat-value">Karang Pramuka & Taman Tunas Wiguna</div>
+                          <div class="mini-stat-sub">Karang Pramuka (±0,7–0,8 Ha), Tunas Wiguna Babarsari (±9,35 Ha)</div>
+                        </div>
+                      </div>
+
+                      <div class="mini-stat">
+                        <div class="mini-stat-icon">
+                          <i class="bi bi-clock-history"></i>
+                        </div>
+                        <div>
+                          <div class="mini-stat-label">Jam Operasional</div>
+                          <div class="mini-stat-value">06.00 – 17.00 WIB</div>
+                          <div class="mini-stat-sub">Setiap hari (pagi hingga sore)</div>
+                        </div>
+                      </div>
+
+                      <div class="mini-stat">
+                        <div class="mini-stat-icon">
+                          <i class="bi bi-cash-coin"></i>
+                        </div>
+                        <div>
+                          <div class="mini-stat-label">Tiket & Retribusi</div>
+                          <div class="mini-stat-value">Tanpa tiket masuk khusus</div>
+                          <div class="mini-stat-sub">Parkir & sewa fasilitas (skuter, outbound, dll.)</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Kontak Pengelola -->
+                  <div class="col-12">
+                    <div class="info-card">
+                      <h6 class="mb-1" style="color:#004A74;">Kontak Pengelola</h6>
+                      <p style="font-size:.95rem; margin-bottom:.25rem;">
+                        Narahubung: <b>Prananto</b><br>
+                        WA:
+                        <a href="https://wa.me/6285600068933" target="_blank" style="color:#0ea5b6;">
+                          0856 0006 8933 <i class="bi bi-whatsapp"></i>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
             </div>
 
-            <!-- QUICK FACTS -->
-            <div class="col-12">
-              <div class="info-card">
-                <h6 class="mb-2" style="color:#004A74;">Quick Facts</h6>
-                <ul class="icon-list">
-                  <li><i class="bi bi-geo-alt-fill"></i> Elevasi: ±900 mdpl</li>
-                  <li><i class="bi bi-thermometer-half"></i> Suhu: 18 – 24 °C</li>
-                  <li><i class="bi bi-car-front-fill"></i> Akses: mobil & bus kecil</li>
-                  <li><i class="bi bi-stars"></i> Aktivitas: camping, outbound, skuter</li>
-                </ul>
+            <!-- GALERI FOTO DI BAWAH TEKS + SIDEBAR -->
+            <div class="about-gallery-strip mt-5" data-aos="fade-up" data-aos-delay="150">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <h6 class="text-uppercase small text-secondary fw-semibold mb-1">Galeri Kegiatan</h6>
+                  <h5 class="mb-0" style="color:#004A74;">Suasana di Bumi Perkemahan Karang Pramuka</h5>
+                </div>
+                <div class="d-none d-md-flex gap-2">
+                  <span class="badge rounded-pill text-bg-light">Camping</span>
+                  <span class="badge rounded-pill text-bg-light">Skuter</span>
+                  <span class="badge rounded-pill text-bg-light">Outbound</span>
+                </div>
               </div>
-            </div>
-            
-            <!-- MINI MAP -->
-            <div class="col-12">
-              <div class="info-card">
-                <h6 class="mb-2" style="color:#004A74;">Peta Lokasi</h6>
 
-                <iframe 
-                  src="https://www.google.com/maps?q=Bumi+Perkemahan+Karang+Pramuka+Kaliurang&output=embed"
-                  width="100%" height="230"
-                  style="border-radius:12px;border:0;"
-                  loading="lazy">
-                </iframe>
+              <div class="about-gallery-track">
+                <figure class="about-gallery-item">
+                  <img src="assets/img/kemah.png" alt="Area perkemahan dan tenda">
+                  <figcaption>Area camping yang luas untuk tenda peserta dan panitia.</figcaption>
+                </figure>
 
-                <small style="color:#6b7280;">
-                  Kaliurang, Hargobinangun – Sleman, DIY
-                </small>
-              </div>
-            </div>
+                <figure class="about-gallery-item">
+                  <img src="assets/img/skuter.jpeg" alt="Bermain skuter di Karang Pramuka">
+                  <figcaption>Bermain skuter sambil menikmati udara dingin Kaliurang.</figcaption>
+                </figure>
 
+                <figure class="about-gallery-item">
+                  <img src="assets/img/outbond.jpg" alt="Outbound dan permainan tim">
+                  <figcaption>Kegiatan outbound dan permainan tim di tengah alam hijau.</figcaption>
+                </figure>
 
-            <!-- KANAN (KARTU INFO) -->
-            <div class="col-lg-4">
-              <div class="row g-3">
-                <!-- Fasilitas -->
-                <div class="col-12">
-                  <div class="info-card">
-                    <h6 class="mb-2" style="color:#004A74;">Fasilitas Utama</h6>
-                    <ul class="icon-list">
-                      <li><i class="bi bi-check-circle-fill"></i> Musholla</li>
-                      <li><i class="bi bi-check-circle-fill"></i> Kamar mandi & toilet</li>
-                      <li><i class="bi bi-check-circle-fill"></i> Gazebo & area istirahat</li>
-                      <li><i class="bi bi-check-circle-fill"></i> Camping ground luas</li>
-                    </ul>
-                  </div>
-                </div>
+                <figure class="about-gallery-item">
+                  <img src="assets/img/spotfoto.jpg" alt="Spot foto dan tugu ikon">
+                  <figcaption>Spot foto ikonik dengan latar pepohonan dan bangunan unik.</figcaption>
+                </figure>
 
-                <!-- Info Lokasi & Pengelola (versi baru) -->
-                <div class="col-12">
-                  <div class="info-card">
-                    <h6 class="mb-3" style="color:#004A74;">Info Lokasi & Pengelola</h6>
+                <figure class="about-gallery-item">
+                  <img src="assets/img/mushola.jpg" alt="Musholla dan fasilitas penunjang">
+                  <figcaption>Musholla dan fasilitas penunjang yang nyaman untuk beribadah.</figcaption>
+                </figure>
 
-                    <div class="mini-stat">
-                      <div class="mini-stat-icon">
-                        <i class="bi bi-bounding-box-circles"></i>
-                      </div>
-                      <div>
-                        <div class="mini-stat-label">Luas Bumi Perkemahan</div>
-                        <div class="mini-stat-value">± 0,7–0,8 Ha</div>
-                        <div class="mini-stat-sub">Kaliurang, Kabupaten Sleman</div>
-                      </div>
-                    </div>
-
-                    <div class="mini-stat">
-                      <div class="mini-stat-icon">
-                        <i class="bi bi-building"></i>
-                      </div>
-                      <div>
-                        <div class="mini-stat-label">Pengelola</div>
-                        <div class="mini-stat-value">Badan Pengelola Bumi Perkemahan</div>
-                        <div class="mini-stat-sub">Kwartir Daerah Gerakan Pramuka DIY (PRAMUKADIY)</div>
-                      </div>
-                    </div>
-
-                    <div class="mini-stat">
-                      <div class="mini-stat-icon">
-                        <i class="bi bi-diagram-3"></i>
-                      </div>
-                      <div>
-                        <div class="mini-stat-label">Bumi Perkemahan Kwarda DIY</div>
-                        <div class="mini-stat-value">Karang Pramuka & Taman Tunas Wiguna</div>
-                        <div class="mini-stat-sub">Karang Pramuka (±0,7–0,8 Ha), Tunas Wiguna Babarsari (±9,35 Ha)</div>
-                      </div>
-                    </div>
-
-                    <div class="mini-stat">
-                      <div class="mini-stat-icon">
-                        <i class="bi bi-clock-history"></i>
-                      </div>
-                      <div>
-                        <div class="mini-stat-label">Jam Operasional</div>
-                        <div class="mini-stat-value">06.00 – 17.00 WIB</div>
-                        <div class="mini-stat-sub">Setiap hari (pagi hingga sore)</div>
-                      </div>
-                    </div>
-
-                    <div class="mini-stat">
-                      <div class="mini-stat-icon">
-                        <i class="bi bi-cash-coin"></i>
-                      </div>
-                      <div>
-                        <div class="mini-stat-label">Tiket & Retribusi</div>
-                        <div class="mini-stat-value">Tanpa tiket masuk khusus</div>
-                        <div class="mini-stat-sub">Pengunjung membayar parkir & sewa fasilitas (skuter, outbound, dll.)</div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <!-- Kontak -->
-                <div class="col-12">
-                  <div class="info-card">
-                    <h6 class="mb-1" style="color:#004A74;">Kontak Pengelola</h6>
-                    <p style="font-size:.95rem; margin-bottom:.25rem;">
-                      Narahubung: <b>Prananto</b><br>
-                      WA:
-                      <a href="https://wa.me/6285600068933" target="_blank" style="color:#0ea5b6;">
-                        0856 0006 8933 <i class="bi bi-whatsapp"></i>
-                      </a>
-                    </p>
-                  </div>
-                </div>
+                <figure class="about-gallery-item">
+                  <img src="assets/img/warung.png" alt="Warung sekitar lokasi">
+                  <figcaption>Warung di sekitar lokasi untuk kebutuhan makan dan minum pengunjung.</figcaption>
+                </figure>
               </div>
             </div>
 
           </div>
+        </section>
+        <!-- ======= End About ======= -->
 
-          <!-- GALERI FOTO DI BAWAH -->
-          <div class="about-gallery-strip mt-5" data-aos="fade-up" data-aos-delay="150">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <div>
-                <h6 class="text-uppercase small text-secondary fw-semibold mb-1">Galeri Kegiatan</h6>
-                <h5 class="mb-0" style="color:#004A74;">Suasana di Bumi Perkemahan Karang Pramuka</h5>
-              </div>
-              <div class="d-none d-md-flex gap-2">
-                <span class="badge rounded-pill text-bg-light">Camping</span>
-                <span class="badge rounded-pill text-bg-light">Skuter</span>
-                <span class="badge rounded-pill text-bg-light">Outbound</span>
-              </div>
-            </div>
-
-            <div class="about-gallery-track">
-              <figure class="about-gallery-item">
-                <img src="assets/img/kemah.png" alt="Area perkemahan dan tenda">
-                <figcaption>Area camping yang luas untuk tenda peserta dan panitia.</figcaption>
-              </figure>
-
-              <figure class="about-gallery-item">
-                <img src="assets/img/skuter.jpeg" alt="Bermain skuter di Karang Pramuka">
-                <figcaption>Bermain skuter sambil menikmati udara dingin Kaliurang.</figcaption>
-              </figure>
-
-              <figure class="about-gallery-item">
-                <img src="assets/img/outbond.jpg" alt="Outbound dan permainan tim">
-                <figcaption>Kegiatan outbound dan permainan tim di tengah alam hijau.</figcaption>
-              </figure>
-
-              <figure class="about-gallery-item">
-                <img src="assets/img/spotfoto.jpg" alt="Spot foto dan tugu ikon">
-                <figcaption>Spot foto ikonik dengan latar pepohonan dan bangunan unik.</figcaption>
-              </figure>
-
-              <figure class="about-gallery-item">
-                <img src="assets/img/mushola.jpg" alt="Musholla dan fasilitas penunjang">
-                <figcaption>Musholla dan fasilitas penunjang yang nyaman untuk beribadah.</figcaption>
-              </figure>
-
-              <figure class="about-gallery-item">
-                <img src="assets/img/warung.png" alt="Musholla dan fasilitas penunjang">
-                <figcaption>Warung disekitar lokasi untuk makan/minum wisatawan.</figcaption>
-              </figure>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <!-- ======= End About ======= -->
 
 
       <!-- ======= Why Us Section ======= -->
