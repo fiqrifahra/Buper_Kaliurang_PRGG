@@ -51,7 +51,6 @@
             <li><a class="active" href="index.html">Beranda</a></li>
             <li><a href="#about">Tentang</a></li>
             <li><a href="#basemap">Data</a></li>
-            <li><a href="#workspace">Tahapan</a></li>
             <li><a href="#ourteam">Tim Pengabdian</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -223,10 +222,11 @@
               border-radius:999px;
             }
 
-            .why-us .icon-box i {
+            .why-us .icon-box i{
               background: linear-gradient(135deg, #004A74, #0ea5b6);
               color: #fff !important;
-              box-shadow: 0 6px 15px rgba(0,74,116,0.35);
+              box-shadow: 0 8px 18px rgba(0,74,116,0.35);
+              font-size:28px;
             }
 
             .about-gallery-item{
@@ -560,7 +560,7 @@
                 <!-- Alasan 2: Lingkungan alam -->
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bx bx-forest"></i>
+                    <i class="bx bx-leaf"></i>
                     <h4>Lingkungan Alam yang Sejuk</h4>
                     <p style="text-align: justify;">
                       Terletak di lereng selatan Gunung Merapi, dikelilingi hutan pinus dan
@@ -605,11 +605,11 @@
           <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
             <div class="col-lg-5 col-md-6 d-flex align-items-stretch">
               <div class="course-item">
-                <img src="assets/img/LiDAR.png" class="img-fluid" alt="..." />
+                <img src="assets/img/pointcloud.png" class="img-fluid" alt="..." />
                 <div class="course-content">
                   <div class="d-flex justify-content-between align-items-center mb-3"></div>
 
-                  <h3>Point Cloud LiDAR</h3>
+                  <h3>Point Cloud LiDAR UAV dan SLAM</h3>
 
                   <div class="trainer d-flex justify-content-between align-items-center">
                     <div class="trainer-profile d-flex align-items-center">
@@ -623,21 +623,44 @@
 
             <div class="col-lg-5 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
               <div class="course-item">
-                <img src="assets/img/DTM.png" class="img-fluid" alt="..." />
+                <img src="assets/img/3dmodell.png" class="img-fluid" alt="..." />
 
                 <div class="course-content">
                   <div class="d-flex justify-content-between align-items-center mb-3"></div>
 
-                  <h3>Digital Terrain Model</h3>
+                  <h3>3D Model Bangunan</h3>
 
                   <div class="trainer d-flex justify-content-between align-items-center">
                     <div class="trainer-profile d-flex align-items-center">
-                      <span>Ground Surface dibuat dari data <i>point cloud</i> LiDAR yang telah dilakukan <i>filtering</i></span>
+                      <span> Model realistis bangunan <i>3D Model Bangunan</i> yang dimodelkan dari <i>point cloud</i></span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class="col-lg-5 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="course-item">
+              <img src="assets/img/orthodanterrain.png" class="img-fluid" alt="Ortofoto dan DTM Kaliurang" />
+
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3"></div>
+
+                <h3>Digital Terrain Model dan Ortofoto</h3>
+
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <span>
+                      Visualisasi <i>Ortofoto</i> dan <i>Digital Terrain Model (DTM)</i> hasil pengolahan data 
+                      <i>point cloud</i> LiDAR, yang merepresentasikan kondisi permukaan tanah dan tutupan lahan 
+                      kawasan Bumi Perkemahan Karang Pramuka secara detail dan akurat.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
             <!-- End Course Item-->
 
           </div>
